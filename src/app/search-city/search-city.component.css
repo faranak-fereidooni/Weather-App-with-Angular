@@ -1,0 +1,35 @@
+body{
+    background-image: linear-gradient(
+        to bottom,
+        #5b0169 0%,
+        #9b03b2 50%,
+        #e876fa 75%,
+        #eea2fa 100%
+    );
+    justify-content: center;
+}
+
+.cityInput {
+  border: none;
+  box-shadow: 10px 10px 10px var(--dark-shadow);
+  height: 50px;
+  margin: 0 auto;
+  width: 600px;
+}
+.cityInput:focus {
+  box-shadow: 0;
+  outline: 0;
+}
+.cityList {
+  background-color: var(--white-color);
+  box-shadow: 10px 10px 10px var(--dark-shadow);
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 10px;
+  transition: all 0.3s ease-in;
+  width: 600px;
+}
+.cityList:hover {
+  background-color: var(--purple-color);
+  color: var(--white-color);
+}

@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrlCity:"http://dataservice.accuweather.com/locations/v1/cities/search",
+  baseUrlWeather:"http://dataservice.accuweather.com/currentconditions/v1",
+  baseUrlHourlyWeather:"http://dataservice.accuweather.com/forecasts/v1/hourly/12hour",
+  keyName:"apikey",
+  keyValue:"5V4ApYLNaDqCL7rnABPqfTqw1a0ElEaj"
 };
 
 /*
@@ -14,3 +19,4 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+import { HttpParams } from '@angular/common/http';

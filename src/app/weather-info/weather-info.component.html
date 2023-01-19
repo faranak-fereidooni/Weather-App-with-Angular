@@ -1,0 +1,42 @@
+<body
+  *ngFor="let weather of weatherData"
+  style="background: url('../../assets/images/{{weather.WeatherIcon}}.jpeg'); background-size: cover; background-repeat: no-repeat; background-position: center;"
+>
+  <div class="container">
+    <div class="cuurrent-weather">Current Weather</div>
+    <div class="current-time">{{ myDate | date : "hh:mm a" }}</div>
+    <div class="upper-data">
+      <div class="weatherLookLike">
+        <div class="temperature-image-container">
+          <img src="../../assets/images/{{ weather.WeatherIcon }}.png" alt="" />
+        </div>
+        <div class="cityName">{{ englishName }}</div>
+        <div class="temperature-block-value">
+          <div class="temp">{{ weather.Temperature.Metric.Value }}°C</div>
+          <div class="weather-type">{{ weather.WeatherText }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lower-data">
+      <div
+        class="hourlyWeatherDataBlock"
+        *ngFor="let hourlyWeather of hourlyWeatherData"
+      >
+        <div class="time-block">
+          {{ hourlyWeather.DateTime | date : "hh:mm a" }}
+        </div>
+        <div class="weather-type-block">
+          <img
+            src="../../assets/images/{{ hourlyWeather.WeatherIcon }}.png"
+            alt=""
+          />
+        </div>
+        <div class="temperature-block">
+          {{ hourlyWeather.Temperature.Value }}°F
+        </div>
+        <div>{{ hourlyWeather.IconPhrase }}</div>
+      </div>
+    </div>
+  </div>
+</body>
