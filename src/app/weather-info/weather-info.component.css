@@ -125,7 +125,7 @@
   }
   .hourlyWeatherDataBlock {
     min-width: 126px;
-    padding: 24px;
+    padding: 10px;
   }
 }
 @media screen and (max-width: 280px) {
@@ -140,6 +140,9 @@
   .temperature-image-container img {
     height: 10vh;
   }
+  .weatherLookLike{
+    column-gap: 0;
+  }
   .weatherLookLike .cityName {
     font-size: 14px;
   }
@@ -153,6 +156,7 @@
     flex-wrap: wrap !important;
   }
   .hourlyWeatherDataBlock {
-    padding: 24px;
+    margin: 1rem 0;
+    padding: 0;
   }
 }

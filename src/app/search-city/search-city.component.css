@@ -14,7 +14,7 @@ body {
   box-shadow: 10px 10px 10px var(--dark-shadow);
   height: 50px;
   margin: 0 auto;
-  width: 600px;
+  max-width: 600px;
 }
 .cityInput:focus {
   box-shadow: 0;
