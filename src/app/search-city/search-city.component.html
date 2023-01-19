@@ -1,18 +1,18 @@
 <body>
-<div class="container">
-  <input
-    type="text"
-    class="form-control cityInput"
-    (input)="callCityApi($event)"
-    placeholder="City Name..."
-  />
-  <div
-    class="cityList"
-    *ngFor="let city of cityData"
-    (click)="selectSpecificCity(city.Key,city.EnglishName)"
-  >
-    {{ city.EnglishName }}, {{ city.AdministrativeArea.LocalizedName }},
-    {{ city.AdministrativeArea.CountryID }}
+  <div class="container">
+    <input
+      type="text"
+      class="form-control cityInput"
+      (input)="callCityApi($event)"
+      placeholder="City Name..."
+    />
+    <div
+      class="cityList"
+      *ngFor="let city of cityData"
+      (click)="selectSpecificCity(city.Key, city.EnglishName)"
+    >
+      {{ city.EnglishName }}, {{ city.AdministrativeArea.LocalizedName }},
+      {{ city.AdministrativeArea.CountryID }}
+    </div>
   </div>
-</div>
 </body>

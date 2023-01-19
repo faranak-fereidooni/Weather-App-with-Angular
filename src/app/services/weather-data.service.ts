@@ -5,17 +5,17 @@ import { Observable } from 'rxjs';
 import { WeatherData } from '../models/weatherData.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class WeatherDataService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http :HttpClient) { }
-
-  getWeatherData(cityCode:string) :Observable<WeatherData[]>{
-    return this.http.get<WeatherData[]>(environment.baseUrlWeather + `/${cityCode}`,{
-      params:new HttpParams()
-      .set(environment.keyName,environment.keyValue)
-
-    })
+  getWeatherData(cityCode: string): Observable<WeatherData[]> {
+    return this.http.get<WeatherData[]>(
+      environment.baseUrlWeather + `/${cityCode}`,
+      {
+        params: new HttpParams().set(environment.keyName, environment.keyValue),
+      }
+    );
   }
 }

@@ -5,19 +5,16 @@ import { CityData } from '../models/cityData.model';
 import { environment } from './../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CityDataService {
+  constructor(private http: HttpClient) {}
 
-
-  constructor(private http:HttpClient){}
-
-  getCityData(cityName:string):Observable<CityData[]>{
-      return this.http.get<CityData[]>(environment.baseUrlCity,{
-        params:new HttpParams()
-        .set(environment.keyName,environment.keyValue)
-        .set('q',cityName),
-      })
-    }
+  getCityData(cityName: string): Observable<CityData[]> {
+    return this.http.get<CityData[]>(environment.baseUrlCity, {
+      params: new HttpParams()
+        .set(environment.keyName, environment.keyValue)
+        .set('q', cityName),
+    });
+  }
 }
-

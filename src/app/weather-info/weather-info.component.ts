@@ -17,21 +17,20 @@ export class WeatherInfoComponent implements OnInit {
   myDate = new Date();
   cityData: CityData[] | undefined;
   englishName!: string;
-  
+
   constructor(
     private weatherDataService: WeatherDataService,
     private hourlyWeatherDataService: HourlyWeatherDataService,
-    private route: ActivatedRoute,
-  ) {
-  }
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     let cityKey: string = this.route.snapshot.paramMap.get('cityKey') ?? '';
-    this.englishName = this.route.snapshot.queryParamMap.get('cityEnglishName') ?? '';
+    this.englishName =
+      this.route.snapshot.queryParamMap.get('cityEnglishName') ?? '';
     if (cityKey == '' && this.englishName == '') {
       return;
     }
-    // if(!cityKey){
     this.weatherDataService.getWeatherData(cityKey).subscribe({
       next: (response) => {
         console.log(response);
@@ -44,6 +43,5 @@ export class WeatherInfoComponent implements OnInit {
         this.hourlyWeatherData = response;
       },
     });
-  // }
   }
 }

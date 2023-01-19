@@ -12,7 +12,7 @@ export class SearchCityComponent implements OnInit {
   static CityData: any;
   constructor(
     private cityDataService: CityDataService,
-    private router: Router,
+    private router: Router
   ) {}
 
   cityData: CityData[] | undefined;
@@ -22,16 +22,17 @@ export class SearchCityComponent implements OnInit {
   callCityApi(event: Event) {
     let inputElement = event.target as HTMLTextAreaElement;
     if (inputElement.value.length >= 2) {
-    this.cityDataService.getCityData(inputElement.value).subscribe({
-      next: (response) => {
-        console.log(response);
-        this.cityData = response;
-      },
+      this.cityDataService.getCityData(inputElement.value).subscribe({
+        next: (response) => {
+          console.log(response);
+          this.cityData = response;
+        },
+      });
+    }
+  }
+  selectSpecificCity(cityKey: string, cityEnglishName: string) {
+    this.router.navigate(['/app-weather-info', cityKey], {
+      queryParams: { cityEnglishName },
     });
-  }
-  }
-  selectSpecificCity(cityKey: string, cityEnglishName : string) {
-    this.router.navigate(
-      ['/app-weather-info',cityKey],{queryParams :{cityEnglishName}});
   }
 }

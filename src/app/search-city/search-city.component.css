@@ -1,12 +1,12 @@
-body{
-    background-image: linear-gradient(
-        to bottom,
-        #5b0169 0%,
-        #9b03b2 50%,
-        #e876fa 75%,
-        #eea2fa 100%
-    );
-    justify-content: center;
+body {
+  background-image: linear-gradient(
+    to bottom,
+    #5b0169 0%,
+    #9b03b2 50%,
+    #e876fa 75%,
+    #eea2fa 100%
+  );
+  justify-content: center;
 }
 
 .cityInput {
