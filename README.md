@@ -5,11 +5,11 @@ version 14.2.3.
 
 this is a weather application. in this project I used restfull api from (https://developer.accuweather.com/) website.
 first you need to do these steps:
-1)login in https://developer.accuweather.com/
-2)go to My Apps
-3)add a new app
-4)copy API KEY
-5)paste it in environment.ts as a API KEY variable
+1. login in https://developer.accuweather.com/
+2. go to My Apps
+3. add a new app
+4. copy API KEY
+5. paste it in environment.ts as a API KEY variable
 
 ## Development server
 

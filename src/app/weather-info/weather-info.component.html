@@ -2,7 +2,8 @@
   *ngFor="let weather of weatherData"
   style="background: url('../../assets/images/{{weather.WeatherIcon}}.jpeg'); background-size: cover; background-repeat: no-repeat; background-position: center;"
 >
-  <div class="container">
+<div class="container">
+  <div class="upper-data-container">
     <div class="cuurrent-weather">Current Weather</div>
     <div class="current-time">{{ myDate | date : "hh:mm a" }}</div>
     <div class="upper-data">
@@ -17,7 +18,8 @@
         </div>
       </div>
     </div>
-
+  </div>
+  <div class="lower-data-container">
     <div class="lower-data">
       <div
         class="hourlyWeatherDataBlock"
@@ -39,4 +41,5 @@
       </div>
     </div>
   </div>
+</div>
 </body>

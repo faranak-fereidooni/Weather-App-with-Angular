@@ -14,7 +14,8 @@ export class HourlyWeatherDataService {
     return this.http.get<HourlyWeatherData[]>(
       environment.baseUrlHourlyWeather + `/${cityCode}`,
       {
-        params: new HttpParams().set(environment.keyName, environment.keyValue),
+        params: new HttpParams()
+        .set(environment.keyName, environment.keyValue),
       }
     );
   }

@@ -14,7 +14,8 @@ export class WeatherDataService {
     return this.http.get<WeatherData[]>(
       environment.baseUrlWeather + `/${cityCode}`,
       {
-        params: new HttpParams().set(environment.keyName, environment.keyValue),
+        params: new HttpParams()
+        .set(environment.keyName, environment.keyValue),
       }
     );
   }

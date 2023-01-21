@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class SearchCityComponent implements OnInit {
   static CityData: any;
+
   constructor(
     private cityDataService: CityDataService,
     private router: Router
@@ -20,8 +21,8 @@ export class SearchCityComponent implements OnInit {
   ngOnInit(): void {}
 
   callCityApi(event: Event) {
-    let inputElement = event.target as HTMLTextAreaElement;
-    if (inputElement.value.length >= 2) {
+    const inputElement = event.target as HTMLTextAreaElement;
+    if (event.target && inputElement.value.length > 2) {
       this.cityDataService.getCityData(inputElement.value).subscribe({
         next: (response) => {
           console.log(response);
@@ -34,5 +35,10 @@ export class SearchCityComponent implements OnInit {
     this.router.navigate(['/app-weather-info', cityKey], {
       queryParams: { cityEnglishName },
     });
+   
+  }
+  handleChange(){
+    console.log('clicked outside');
+    this.cityData=[];
   }
 }

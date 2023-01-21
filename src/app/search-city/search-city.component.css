@@ -1,35 +1,47 @@
 body {
-  background-image: linear-gradient(
-    to bottom,
-    #5b0169 0%,
-    #9b03b2 50%,
-    #e876fa 75%,
-    #eea2fa 100%
-  );
-  justify-content: center;
+  background-image: url(../../assets/images/backgropund3.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
 }
-
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+.logo-container h3{
+  color: var(--white-color);
+  margin-left: 0.8rem;
+}
 .cityInput {
   border: none;
   box-shadow: 10px 10px 10px var(--dark-shadow);
   height: 50px;
-  margin: 0 auto;
+  margin: 10rem auto;
   max-width: 600px;
+  position: relative;
 }
 .cityInput:focus {
   box-shadow: 0;
   outline: 0;
 }
+.cityList-container {
+  margin: 0 auto;
+  margin-top: -162px;
+  max-height: 300px;
+  opacity: 0.8;
+  overflow-y: auto;
+  max-width: 600px;
+  box-shadow: 10px 10px 10px var(--dark-shadow);
+
+}
 .cityList {
   background-color: var(--white-color);
-  box-shadow: 10px 10px 10px var(--dark-shadow);
   cursor: pointer;
-  margin: 0 auto;
   padding: 10px;
   transition: all 0.3s ease-in;
-  width: 600px;
 }
 .cityList:hover {
-  background-color: var(--purple-color);
-  color: var(--white-color);
+  background-color: transparent;
+  color: var(--black-color);
 }
