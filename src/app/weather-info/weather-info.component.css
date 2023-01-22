@@ -74,6 +74,10 @@
     overflow-x: scroll;
     padding: 0;
   }
+  .hourlyWeatherDataBlock{
+    padding:8px;
+    min-width: 141px;
+}
 }
 
 @media screen and (width: 1024px) {
@@ -87,6 +91,10 @@
   .lower-data-container {
     overflow-x: scroll;
     padding: 0;
+  }
+  .hourlyWeatherDataBlock{
+    padding:8px;
+    min-width: 151px;
   }
 }
 @media screen and (min-width: 768px) and (max-width:912px) {

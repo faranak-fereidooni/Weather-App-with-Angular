@@ -5,7 +5,7 @@
 <div class="container">
   <div class="upper-data-container">
     <div class="cuurrent-weather">Current Weather</div>
-    <div class="current-time">{{ myDate | date : "hh:mm a" }}</div>
+    <div class="current-time">{{ weather.LocalObservationDateTime | date : "hh:mm a" }}</div>
     <div class="upper-data">
       <div class="weatherLookLike">
         <div class="temperature-image-container">
