@@ -8,7 +8,7 @@ export const environment = {
   baseUrlWeather:"http://dataservice.accuweather.com/currentconditions/v1",
   baseUrlHourlyWeather:"http://dataservice.accuweather.com/forecasts/v1/hourly/12hour",
   keyName:"apikey",
-  keyValue:"lmrK0x6fDHkahn107pI4atVFfmTArVMz"
+  keyValue:"WhmdevJjYhRQLC3h9TsIjPgsAybSzHSc"
 };
 
 /*
